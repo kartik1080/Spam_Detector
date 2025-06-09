@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+flask
+flask-cors
+python-jose
+passlib
+python-multipart
+scikit-learn
+nltk
+pandas
+numpy
+python-dotenv
+sqlalchemy
+pymysql
+bcrypt
