@@ -4,14 +4,16 @@ from app.api import auth, spam_filter, user
 from app.database import engine, Base
 
 # Create database tables
+
+app = FastAPI()
+# origin = [
+#     "http://localhost:5173"
+# ] 
 Base.metadata.create_all(bind=engine)
-
-app = FastAPI(title="AI Spam Filter API")
-
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # React frontend URL
+    allow_origins=["http://localhost:5173"],  # React frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
