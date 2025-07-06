@@ -1,0 +1,15 @@
+.footer {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.85);
+    color: #444;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 -2px 16px rgba(120, 119, 198, 0.07);
+    z-index: 10;
+    backdrop-filter: blur(8px);
+}

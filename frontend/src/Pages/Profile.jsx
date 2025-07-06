@@ -27,7 +27,7 @@ function Profile() {
 
     const fetchProfile = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/api/users/profile');
+            const response = await axios.get('http://localhost:8000/api/users/me');
             setProfile(response.data);
         } catch (err) {
             setError('Error fetching profile');
@@ -43,7 +43,7 @@ function Profile() {
         setSuccess('');
 
         try {
-            await axios.put('http://localhost:8000/api/users/profile', profile);
+            await axios.put('http://localhost:8000/api/users/me', profile);
             setSuccess('Profile updated successfully');
         } catch (err) {
             setError('Error updating profile');
@@ -102,7 +102,6 @@ function Profile() {
                                 name="username"
                                 value={profile.username}
                                 onChange={handleChange}
-                                disabled
                             />
                         </Grid>
                         <Grid item xs={12}>

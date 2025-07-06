@@ -1,0 +1,75 @@
+.floating-shapes-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.25;
+    filter: blur(2px);
+    animation: float 18s ease-in-out infinite;
+}
+
+.shape1 {
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(135deg, #ffb6b9 0%, #fae3d9 100%);
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.shape2 {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #b5ead7 0%, #c7ceea 100%);
+    top: 60%;
+    left: 80%;
+    animation-delay: 3s;
+}
+
+.shape3 {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #f7d6e0 0%, #f7f6cf 100%);
+    top: 80%;
+    left: 20%;
+    animation-delay: 6s;
+}
+
+.shape4 {
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(135deg, #c1c8e4 0%, #f7d6e0 100%);
+    top: 30%;
+    left: 70%;
+    animation-delay: 9s;
+}
+
+.shape5 {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, #b5ead7 0%, #ffdac1 100%);
+    top: 50%;
+    left: 40%;
+    animation-delay: 12s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-40px) scale(1.08);
+    }
+}
